@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.11" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.11" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\MainScreen.axaml.cs">
+      <DependentUpon>MainScreen.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StartupScreenView.axaml.cs">
+      <DependentUpon>StartupScreenView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
